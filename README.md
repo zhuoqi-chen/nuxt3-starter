@@ -33,3 +33,25 @@ yarn add -D @nuxtjs/eslint-config-typescript eslint
     "source.fixAll.eslint": true
   },
 ```
+
+### husky & lint-staged
+
+```
+yarn add -D husky lint-staged typescript
+```
+`package.json` configuration
+
+```json
+"scripts": {
+  "prepare": "husky install"
+},
+"lint-staged": {
+  "**/*.{js,ts,vue}": [
+    "npm run lint:fix"
+  ]
+}
+```
+```bash
+npm run prepare
+npx husky add .husky/pre-commit "npx --no-install lint-staged"
+```

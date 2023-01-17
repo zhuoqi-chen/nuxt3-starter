@@ -5,11 +5,21 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint:fix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .eslintignore .",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "eslint": "^8.32.0",
-    "nuxt": "^3.0.0"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "nuxt": "^3.0.0",
+    "typescript": "^4.9.4"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,vue}": [
+      "npm run lint:fix"
+    ]
   }
 }
