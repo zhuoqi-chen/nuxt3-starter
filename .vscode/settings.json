@@ -1,24 +1,8 @@
-# Nuxt 3 Starter
-
-# 工程搭建日志
-
-### [Eslint](https://github.com/nuxt/eslint-config) Setup with Typescript
-
-```bash
-yarn add -D @nuxtjs/eslint-config-typescript eslint
-```
-
-`.eslintrc` configuration
-
-```json
 {
-  "extends": ["@nuxtjs/eslint-config-typescript"]
-}
-```
-
-`.vscode/settings.json` configuration
-
-```json
+  "cSpell.words": [
+    "Nuxt",
+    "nuxtjs"
+  ],
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
@@ -32,4 +16,5 @@ yarn add -D @nuxtjs/eslint-config-typescript eslint
     "source.fixAll": false,
     "source.fixAll.eslint": true
   },
-```
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
