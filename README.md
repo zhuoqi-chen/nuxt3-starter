@@ -2,7 +2,7 @@
 
 # 工程搭建日志
 
-### [Eslint](https://github.com/nuxt/eslint-config) Setup with Typescript
+### [Eslint](https://github.com/nuxt/eslint-config) setup with Typescript
 
 ```bash
 yarn add -D @nuxtjs/eslint-config-typescript eslint
@@ -102,4 +102,19 @@ yarn add -D @nuxtjs/tailwindcss
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
 });
+```
+
+### [pinia](https://pinia.vuejs.org/) setup
+
+```bash
+yarn add pinia @pinia/nuxt
+```
+
+`nuxt.config.ts` configuration
+
+```ts
+export default defineNuxtConfig({
+  modules: [..., '@pinia/nuxt'],
+});
+
 ```

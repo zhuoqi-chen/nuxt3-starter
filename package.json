@@ -26,5 +26,9 @@
     "**/*.{js,ts,vue}": [
       "npm run lint:fix"
     ]
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
+    "pinia": "^2.0.29"
   }
 }
