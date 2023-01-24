@@ -89,3 +89,17 @@ yarn add -D prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin
   "trailingComma": "es5"
 }
 ```
+
+### [tailwindcss](https://tailwindcss.com/docs/guides/nuxtjs) setup
+
+```bash
+yarn add -D @nuxtjs/tailwindcss
+```
+
+`nuxt.config.ts` configuration
+
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/tailwindcss'],
+});
+```
