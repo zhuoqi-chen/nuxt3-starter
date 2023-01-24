@@ -39,6 +39,7 @@ yarn add -D @nuxtjs/eslint-config-typescript eslint
 ```
 yarn add -D husky lint-staged typescript
 ```
+
 `package.json` configuration
 
 ```json
@@ -51,7 +52,40 @@ yarn add -D husky lint-staged typescript
   ]
 }
 ```
+
 ```bash
 npm run prepare
 npx husky add .husky/pre-commit "npx --no-install lint-staged"
+```
+
+### [Prettier](https://prettier.io/docs/en/integrating-with-linters.html) setup
+
+```bash
+yarn add -D prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-nuxt
+```
+
+`.eslintrc` configuration
+
+```js
+{
+  "extends": [
+    ...,
+    "plugin:nuxt/recommended",
+    "plugin:prettier/recommended",
+  ]
+}
+```
+
+`.prettierrc` configuration
+
+```json
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "jsxBracketSameLine": true,
+  "maxLength": 80,
+  "trailingComma": "es5"
+}
 ```
